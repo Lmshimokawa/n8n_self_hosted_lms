@@ -1,0 +1,3 @@
+# Este arquivo garante que o diretório shared-files seja versionado no Git
+# O diretório é usado para compartilhar arquivos entre o container n8n e o host
+# Usado pelo node "Read/Write Files from Disk" do n8n
