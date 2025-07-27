@@ -1,0 +1,131 @@
+# ==========================================
+# n8n Self-Hosted - GitIgnore
+# ==========================================
+
+# ==========================================
+# ARQUIVOS SENSÍVEIS (NUNCA COMMITAR!)
+# ==========================================
+.env
+.env.local
+.env.production
+.env.test
+*.env
+
+# Chaves de criptografia
+encryption.key
+n8n.key
+
+# ==========================================
+# DADOS E VOLUMES DO DOCKER
+# ==========================================
+# Dados persistentes (volumes nomeados são gerenciados pelo Docker)
+# Mas se usar bind mounts locais:
+/data/
+/postgres-data/
+/n8n-data/
+
+# ==========================================
+# ARQUIVOS COMPARTILHADOS (OPCIONAL)
+# ==========================================
+# Arquivos temporários no shared-files
+shared-files/*.tmp
+shared-files/*.log
+shared-files/temp/
+
+# Mas preserve o diretório
+!shared-files/.gitkeep
+
+# ==========================================
+# LOGS E CACHE
+# ==========================================
+*.log
+logs/
+tmp/
+temp/
+
+# Cache do npm/node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==========================================
+# DOCKER E INFRAESTRUTURA
+# ==========================================
+# Override files do docker-compose (específicos do dev)
+docker-compose.override.yml
+docker-compose.dev.yml
+docker-compose.local.yml
+
+# Arquivos de build
+Dockerfile.dev
+Dockerfile.local
+
+# ==========================================
+# CERTIFICATES E SSL
+# ==========================================
+# Certificados SSL locais
+*.crt
+*.key
+*.pem
+*.p12
+*.pfx
+certs/
+ssl/
+
+# Let's Encrypt
+letsencrypt/
+
+# ==========================================
+# BACKUP E SCRIPTS
+# ==========================================
+# Backups locais (prefira cloud storage)
+backups/
+*.backup
+*.dump
+*.sql.gz
+
+# Scripts temporários
+temp_*.sh
+temp_*.ps1
+
+# ==========================================
+# IDE E EDITOR
+# ==========================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ==========================================
+# OS ESPECÍFICOS
+# ==========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ==========================================
+# OUTROS
+# ==========================================
+# Arquivos de configuração pessoal
+config.local.*
+settings.local.*
+
+# Documentação gerada
+/docs/build/
